@@ -1,0 +1,479 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+
+<link rel="stylesheet"  href="static/styles/settings.css">
+<link rel="stylesheet"  href="static/styles/simple-line-icons.css">
+<link rel="stylesheet"  href="static/styles/jquery-ui.css">
+<link rel="stylesheet"  href="static/styles/jquery.fancybox.css">
+<link rel="stylesheet"  href="static/styles/jquery.selectBox.css">
+<link rel="stylesheet"  href="static/styles/global.css">
+<link rel="stylesheet"  href="static/styles/style1.css" >
+<link rel="stylesheet"  href="static/styles/responsive1.css">
+<link rel="stylesheet"  href="static/styles/skin.less">
+
+
+{% endblock %}
+
+{% block body %}
+
+<!--== Page Title Area Start ==-->
+<section id="page-title-area" class="section-padding overlay">
+    <div class="container">
+        <div class="row">
+            <!-- Page Title Start -->
+            <div class="col-lg-12">
+                <div class="section-title  text-center">
+                    <h2>Cars</h2>
+                    <span class="title-line"><i class="fa fa-car"></i></span>
+                </div>
+            </div>
+            <!-- Page Title End -->
+        </div>
+    </div>
+</section>
+<!--== Page Title Area End ==-->
+
+    <section class="filter-wrapper">
+    	<div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/i20magna.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Hyundai i20 Magna</h5>
+
+                <span>Rate  <small> ₹50</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[0][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[0][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[0][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/verito.webp" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Mahindra Verito</h5>
+
+                <span>Rate <small> ₹60</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[1][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[1][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[1][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/eon.webp" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Hyundai EON</h5>
+
+                <span>Rate <small> ₹40</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[2][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[2][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[2][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li></ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/swift.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Maruti Swift</h5>
+
+                <span>Rate <small> ₹60</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[3][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[3][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[3][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/ritz.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Maruti Ritz</h5>
+
+                <span>Rate <small> ₹50</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[4][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[4][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[4][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/baleno.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Maruti Suzuki Baleno</h5>
+
+                <span>Rate <small> ₹70</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[5][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[5][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[5][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/ford.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Ford Aspire</h5>
+
+                <span>Rate <small> ₹50</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[6][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[6][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[6][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/wagonr.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Wagon R</h5>
+
+                <span>Rate <small> ₹60</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[7][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[7][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[7][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  <!-- <a ><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</a> -->
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/i10.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Hyundai Grand i10</h5>
+
+                <span>Rate  <small> ₹60</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[8][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[8][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[8][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  <!-- <a ><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</a> -->
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/bolt.webp" alt="" />
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Tata Bolt</h5>
+
+                <span>Rate <small> ₹40</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[9][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[9][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[9][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  <!-- <a ><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</a> -->
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/scorpio.webp" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Mahindra Scorpio</h5>
+
+                <span>Rate <small> ₹100</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[10][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[10][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[10][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  <!-- <a ><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</a> -->
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <div class="filter-cars">
+              <div class="filter-inner">
+                <img src="static/img/celerio.png" alt="" />
+
+              </div>
+              <div class="filter-car-details clearfix">
+
+                <h5>Celerio</h5>
+
+                <span>Rate <small> ₹40</small> <strong>/ Per hour</strong></span>
+
+              </div>
+              <ul class="filter-car-more-info clearfix">
+                <li>
+                  <i class="fa fa-tachometer" aria-hidden="true"></i>Diesel
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true"></i>Available-{{ result[11][1] }}
+                </li>
+                <li class="orange-btn">
+                  {% if result[11][1] > 0 %}
+                  <form method="POST" action="{{ url_for('book') }}">
+                      <button style="cursor: pointer;" name="btn1" value="{{ result[11][0] }}" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</button>
+                  </form>
+                  <!-- <a ><i class="fa fa-plus-circle" aria-hidden="true"></i>Rent now</a> -->
+                  {% else %}
+                  <button><i class="fa fa-plus-circle" aria-hidden="true"></i>Not Available</button>
+                  {% endif %}
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="preview-more">
+              <a href="#" class="button"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Preview more</a>
+            </div>
+          </div>
+        </div>
+  	</div>
+</section>
+
+
+    <script src="static/js/jquery-ui.js"></script>
+    <script src="static/js/less.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/jquery.selectBox.js"></script>
+    <script src="static/js/jquery.fancybox.js"></script>
+
+
+{% endblock %}

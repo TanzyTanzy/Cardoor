@@ -1,0 +1,296 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!--== SlideshowBg Area Start ==-->
+    <section id="slideslow-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="slideshowcontent">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <h1>RENT A CAR TODAY!</h1>
+                                <p>EXPLORE THE WORLD!!</p>
+
+                                <div class="book-ur-car">
+                                    <form action="{{ url_for('index') }}" method="POST">
+
+                                      <div class="pick-date bookinput-item">
+                                          <input id="startDate2" name="pickupdate" placeholder="Pickup Date" required />
+                                      </div>
+
+                                      <div class="retern-date bookinput-item">
+                                          <input id="endDate2" name="returndate" placeholder="Return Date" required/>
+                                      </div>
+
+                                        <div class="pick-location bookinput-item">
+                                            <select class="custom-select" name="pickuptime" required>
+                                              <option selected>Pickup Time</option>
+                                              <option value="1">12:00 AM</option>
+                                              <option value="2">1:00 AM</option>
+                                              <option value="3">2:00 AM</option>
+                                              <option value="4">3:00 AM</option>
+                                              <option value="5">4:00 AM</option>
+                                              <option value="6">5:00 AM</option>
+                                              <option value="7">6:00 AM</option>
+                                              <option value="8">7:00 AM</option>
+                                              <option value="9">8:00 AM</option>
+                                              <option value="10">9:00 AM</option>
+                                              <option value="11">10:00 AM</option>
+                                              <option value="12">11:00 AM</option>
+                                              <option value="13">12:00 PM</option>
+                                              <option value="14">1:00 PM</option>
+                                              <option value="15">2:00 PM</option>
+                                              <option value="16">3:00 PM</option>
+                                              <option value="17">4:00 PM</option>
+                                              <option value="18">5:00 PM</option>
+                                              <option value="19">6:00 PM</option>
+                                              <option value="20">7:00 PM</option>
+                                              <option value="21">8:00 PM</option>
+                                              <option value="22">9:00 PM</option>
+                                              <option value="23">10:00 PM</option>
+                                              <option value="24">11:00 PM</option>
+                                            </select>
+                                        </div>
+
+
+
+                                        <div class="pick-location bookinput-item">
+                                            <select class="custom-select" name="returntime" required>
+                                              <option selected>Return Time</option>
+                                              <option value="1">12:00 AM</option>
+                                              <option value="2">1:00 AM</option>
+                                              <option value="3">2:00 AM</option>
+                                              <option value="4">3:00 AM</option>
+                                              <option value="5">4:00 AM</option>
+                                              <option value="6">5:00 AM</option>
+                                              <option value="7">6:00 AM</option>
+                                              <option value="8">7:00 AM</option>
+                                              <option value="9">8:00 AM</option>
+                                              <option value="10">9:00 AM</option>
+                                              <option value="11">10:00 AM</option>
+                                              <option value="12">11:00 AM</option>
+                                              <option value="13">12:00 PM</option>
+                                              <option value="14">1:00 PM</option>
+                                              <option value="15">2:00 PM</option>
+                                              <option value="16">3:00 PM</option>
+                                              <option value="17">4:00 PM</option>
+                                              <option value="18">5:00 PM</option>
+                                              <option value="19">6:00 PM</option>
+                                              <option value="20">7:00 PM</option>
+                                              <option value="21">8:00 PM</option>
+                                              <option value="22">9:00 PM</option>
+                                              <option value="23">10:00 PM</option>
+                                              <option value="24">11:00 PM</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="bookcar-btn bookinput-item">
+                                            <button type="submit">Book Car</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== SlideshowBg Area End ==-->
+
+    <!--== About Us Area Start ==-->
+    <section id="about-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg-12" id="about">
+                    <div class="section-title  text-center" >
+                        <h2>About us</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Rent a car now and enjoy a self-ride</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="row">
+                <!-- About Content Start -->
+                <div class="col-lg-6">
+                    <div class="display-table">
+                        <div class="display-table-cell">
+                            <div class="about-content">
+                                <p>Cardoor is a venture in order to make people own
+                                  the experience and not the car.We started with renting 10 cars in 1998intially and now with full customer support we have flourished.
+                                  Cardoor is India’s first aggregator service in the business of car rentals. We at Cardoor aim to be a one stop shop for rent-a-car services.
+                                   Bid adieu to expensive maintenance and fuel cost.
+                                  With Cardoor you can hire cars/bikes for self drive by the hour, day or week and have them delivered right at your doorstep.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About Content End -->
+
+                <!-- About Video Start -->
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="static/img/home-2-about.png" alt="Cardoor">
+                    </div>
+                </div>
+                <!-- About Video End -->
+            </div>
+
+                    </div>
+    </section>
+    <!--== About Us Area End ==-->
+
+    <!--== Partner Area Start ==-->
+    <div id="partner-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="partner-content-wrap">
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="static/img/partner/partner-logo-1.png" alt="Cardoor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="static/img/partner/partner-logo-2.png" alt="Cardoor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="static/img/partner/partner-logo-3.png" alt="Cardoor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="static/img/partner/partner-logo-4.png" alt="Cardoor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="static/img/partner/partner-logo-5.png" alt="Cardoor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="static/img/partner/partner-logo-1.png" alt="Cardoor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+
+                        <!-- Single Partner Start -->
+                        <div class="single-partner">
+                            <div class="display-table">
+                                <div class="display-table-cell">
+                                    <img src="static/img/partner/partner-logo-4.png" alt="Cardoor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Partner End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--== Partner Area End ==-->
+
+    <!--== Services Area Start ==-->
+    <section id="service-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Section Title Start -->
+                <div class="col-lg-12" id="services">
+                    <div class="section-title  text-center" >
+                        <h2>Our Services</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Get exciting offers and enjoy a self-ride</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+			<!-- Service Content Start -->
+			<div class="row">
+				<div class="col-lg-11 m-auto text-center">
+					<div class="service-container-wrap">
+						<!-- Single Service Start -->
+						<div class="service-item">
+							<i class="fa fa-taxi"></i>
+							<h3>RENT A CAR</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
+						</div>
+						<!-- Single Service End -->
+
+						<!-- Single Service Start -->
+						<div class="service-item">
+              <i class="fa fa-map-marker"></i>
+							<h3>CAR REPAIR</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
+						</div>
+						<!-- Single Service End -->
+
+						<!-- Single Service Start -->
+												<!-- Single Service End -->
+
+						<!-- Single Service Start -->
+						<div class="service-item">
+							<i class="fa fa-life-ring"></i>
+							<h3>life insurance</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
+						</div>
+						<!-- Single Service End -->
+
+						<!-- Single Service Start -->
+						<div class="service-item">
+							<i class="fa fa-bath"></i>
+							<h3>car wash</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit admollitia.</p>
+						</div>
+						<!-- Single Service End -->
+
+						<!-- Single Service Start -->
+
+						<!-- Single Service End -->
+					</div>
+				</div>
+			</div>
+			<!-- Service Content End -->
+        </div>
+    </section>
+    <!--== Services Area End ==-->
+
+{% endblock %}

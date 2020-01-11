@@ -1,0 +1,174 @@
+/*
+ 2.1 Form Elements
+ -----------------------------*/
+button, input, optgroup, textarea {
+	margin: 0;
+	padding: 12px 25px;
+	font-size: 16px;
+	line-height:1.5;
+	color: #fff;
+	background: #FFD000;
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-appearance: none;
+}
+input {
+	line-height: normal;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+
+	outline: 0;
+}
+input[type="checkbox"], input[type="radio"] {
+	padding: 0;
+	border: none;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"], input[type="file" {
+	-webkit-appearance: none;
+	cursor: pointer;
+	line-height: normal;
+	overflow: visible;
+}
+button[disabled], input[disabled] {
+	cursor: default;
+	color: #999;
+	border-color: #ccc;
+}
+select {
+	border: 0;
+	color:rgba(255,255,255,0.4);
+	width: 270px;
+	padding: 10px;
+	-webkit-appearance: none; /*Removes default chrome and safari style*/
+	-moz-appearance: none; /* Removes Default Firefox style*/
+	appearance: none;
+	background: #664238 url('../images/down-arrow.png') no-repeat 95% center;
+	border-radius:0;
+}
+/*
+ 2.2) List Styles
+ ---------------------------------*/
+ul, ol, dl {
+	font-size: 100%;
+	line-height: 1.5;
+}
+li, dt {
+	line-height: 1.5em;
+}
+dl {
+	margin: 0 0 1em 0;
+}
+dd {
+	margin: 0 0 1em 0.8em;
+}
+ul {
+	list-style-type: none;
+}
+ol {
+	list-style-type: decimal;
+	margin: 0 0 1em 0;
+}
+ul ul, ol ul {
+	list-style-type: circle;
+	margin-top: 0;
+}
+ol ol {
+	list-style-type: lower-latin;
+	margin-top: 0;
+}
+/*
+ 2.3) General Text Formatting
+ -----------------------------------*/
+small {
+	font-size: 85.71429%;
+	line-height: 1.75;
+}
+
+/*
+ 2.5) Table Elements
+ --------------------------*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+	color: #444444;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+	margin: 0 0 1.35714em 0;
+}
+caption {
+	font-variant: small-caps;
+}
+th, td {
+	line-height: 1.5em;
+	vertical-align: top;
+	padding: 0.71429em 0.5em;
+}
+th *:first-child, td *:first-child {
+	margin-top: 0;
+}
+thead th {
+	text-align: left;
+	color: #000;
+	border-bottom: 2px #000 solid;
+}
+tbody th {
+	text-align: left;
+	border-top: 1px solid #ccc;
+}
+tbody td {
+	text-align: left;
+	border-top: 1px solid #ccc;
+}
+/*
+ 2.6) Button Styles
+ -------------------------*/
+.btn, input.btn, button.btn {
+	font-family: 'Open Sans', sans-serif;
+}
+button.btn-submit {
+}
+/* Clear Floated Elements
+ --------------------------*/
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/*
+ 3.) Site Wide Content
+ ------------------------------*/
+#wrapper {
+	overflow: hidden;
+	position: relative;
+}
+/*
+ 4.) Header Styles
+ ------------------------------*/
+.ui-widget-content{
+	background-image:none;
+}
+.fa.fa-angle-down, .drop-down-parent .fa.fa-angle-up {
+	display: none;
+}
